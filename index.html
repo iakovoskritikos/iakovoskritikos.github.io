@@ -3,7 +3,70 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Iakovos Kritikos</title>
+  <title>Iakovos Kritikos | Biomedical Engineer &amp; Sr. Scientist, R&amp;D Informatics</title>
+  <meta name="description" content="Iakovos (Jacob) Kritikos is a Sr. Scientist in R&amp;D Informatics at Eli Lilly and Company (Boston), a doctoral candidate (DBA) at University College London, and an architect of adaptive virtual-reality systems for medicine." />
+  <meta property="og:title" content="Iakovos Kritikos | Biomedical Engineer &amp; Sr. Scientist, R&amp;D Informatics" />
+  <meta property="og:description" content="Iakovos (Jacob) Kritikos is a Sr. Scientist in R&amp;D Informatics at Eli Lilly and Company (Boston), a doctoral candidate (DBA) at University College London, and an architect of adaptive virtual-reality systems for medicine." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://iakovoskritikos.com" />
+  <link rel="canonical" href="https://iakovoskritikos.com" />
+
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Iakovos Kritikos",
+    "alternateName": "Jacob Kritikos",
+    "givenName": "Iakovos",
+    "familyName": "Kritikos",
+    "jobTitle": "Sr. Scientist, R&D Informatics",
+    "description": "Iakovos (Jacob) Kritikos is a Sr. Scientist in R&D Informatics at Eli Lilly and Company, a doctoral candidate (DBA) at University College London, and an architect of adaptive virtual-reality systems for medicine.",
+    "url": "https://iakovoskritikos.com/",
+    "sameAs": [
+      "https://orcid.org/0000-0003-3861-6268",
+      "https://scholar.google.com/citations?user=Zhz_rtQAAAAJ&hl=en",
+      "https://www.linkedin.com/in/iakovoskritikos",
+      "https://github.com/iakovoskritikos"
+    ],
+    "knowsAbout": [
+      "Biomedical Engineering",
+      "Virtual Reality",
+      "Physiological Computing",
+      "Research Informatics",
+      "Electrodermal Activity",
+      "Artificial Intelligence"
+    ],
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Eli Lilly and Company",
+      "url": "https://www.lilly.com"
+    },
+    "affiliation": {
+      "@type": "CollegeOrUniversity",
+      "name": "University College London",
+      "url": "https://www.ucl.ac.uk"
+    },
+    "alumniOf": [
+      {
+        "@type": "CollegeOrUniversity",
+        "name": "Duke University",
+        "url": "https://duke.edu"
+      },
+      {
+        "@type": "CollegeOrUniversity",
+        "name": "Imperial College London",
+        "url": "https://www.imperial.ac.uk"
+      },
+      {
+        "@type": "CollegeOrUniversity",
+        "name": "National Technical University of Athens",
+        "url": "https://www.ntua.gr"
+      }
+    ]
+  }
+  </script>
+
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -17,110 +80,95 @@
       --accent2:   #3fb950;
       --tag-bg:    #1f2937;
       --tag-text:  #93c5fd;
+      --highlight: #238636;
     }
 
     body {
       background: var(--bg);
       color: var(--text);
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-      font-size: 16px;
-      line-height: 1.6;
+      font-size: 15.5px;
+      line-height: 1.65;
     }
 
     a { color: var(--accent); text-decoration: none; }
     a:hover { text-decoration: underline; }
 
-    /* ── Layout ── */
-    .container { max-width: 860px; margin: 0 auto; padding: 0 24px; }
+    .container { max-width: 840px; margin: 0 auto; padding: 0 24px; }
 
-    /* ── Header ── */
+    /* Header */
     header {
       border-bottom: 1px solid var(--border);
-      padding: 64px 0 48px;
+      padding: 56px 0 40px;
     }
-    header .container { display: flex; align-items: center; gap: 40px; flex-wrap: wrap; }
+    header .container { display: flex; align-items: flex-start; gap: 32px; flex-wrap: wrap; }
 
     .avatar {
-      width: 96px; height: 96px;
+      width: 88px; height: 88px;
       border-radius: 50%;
-      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      background: linear-gradient(135deg, #3b3fa2, #58a6ff);
       display: flex; align-items: center; justify-content: center;
-      font-size: 36px; font-weight: 700; color: #fff;
+      font-size: 32px; font-weight: 700; color: #fff;
       flex-shrink: 0;
       letter-spacing: -1px;
     }
 
-    .hero h1 { font-size: 2rem; font-weight: 700; letter-spacing: -0.5px; }
-    .hero .tagline { color: var(--muted); margin-top: 6px; font-size: 1rem; }
-    .hero .links { margin-top: 14px; display: flex; gap: 16px; flex-wrap: wrap; }
-    .hero .links a {
-      color: var(--muted); font-size: 0.875rem;
-      display: flex; align-items: center; gap: 6px;
-      transition: color 0.15s;
+    .hero { flex: 1; min-width: 280px; }
+    .hero h1 { font-size: 1.85rem; font-weight: 700; letter-spacing: -0.02em; color: #ffffff; }
+    .hero .role { font-size: 1.05rem; color: #a5d6ff; margin-top: 4px; font-weight: 500; }
+    .hero .sub-role { font-size: 0.92rem; color: var(--muted); margin-top: 2px; }
+    
+    .links { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 18px; }
+    .links a {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: 0.85rem; color: var(--text);
+      background: var(--surface); border: 1px solid var(--border);
+      padding: 5px 12px; border-radius: 6px;
+      transition: all 0.15s ease;
     }
-    .hero .links a:hover { color: var(--text); text-decoration: none; }
-    .hero .links svg { width: 16px; height: 16px; fill: currentColor; }
+    .links a:hover { border-color: var(--accent); color: var(--accent); text-decoration: none; }
 
-    /* ── Sections ── */
-    section { padding: 48px 0; border-bottom: 1px solid var(--border); }
-    section:last-of-type { border-bottom: none; }
-
+    /* Sections */
+    section { padding: 36px 0; border-bottom: 1px solid var(--border); }
     .section-label {
-      font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em;
-      text-transform: uppercase; color: var(--muted);
-      margin-bottom: 24px;
+      font-size: 0.8rem; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.08em; color: var(--accent); margin-bottom: 16px;
     }
 
-    /* ── About ── */
-    .about p { color: var(--muted); max-width: 640px; }
-    .about p + p { margin-top: 12px; }
+    p + p { margin-top: 14px; }
+    .lead-text { font-size: 1.02rem; line-height: 1.7; color: #f0f6fc; }
 
-    /* ── Projects grid ── */
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-      gap: 16px;
+    /* Callout */
+    .callout-box {
+      background: rgba(56, 139, 253, 0.08);
+      border-left: 3px solid var(--accent);
+      padding: 16px 20px;
+      border-radius: 0 8px 8px 0;
+      margin: 20px 0;
+      font-size: 0.94rem;
     }
 
-    .card {
+    /* Items */
+    .item-list { display: flex; flex-direction: column; gap: 18px; }
+    .item-card {
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: 8px;
-      padding: 20px 22px;
-      display: flex; flex-direction: column; gap: 10px;
+      padding: 18px 20px;
       transition: border-color 0.15s;
     }
-    .card:hover { border-color: var(--accent); }
-
-    .card-header { display: flex; align-items: center; gap: 10px; }
-    .card-icon { font-size: 1.25rem; }
-    .card-title { font-weight: 600; font-size: 0.95rem; }
-    .card-title a { color: var(--text); }
-    .card-title a:hover { color: var(--accent); text-decoration: none; }
-
-    .card-desc { font-size: 0.875rem; color: var(--muted); flex: 1; }
-
-    .card-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px; }
-    .tag {
-      background: var(--tag-bg); color: var(--tag-text);
-      font-size: 0.75rem; padding: 2px 8px; border-radius: 20px;
+    .item-card:hover { border-color: #484f58; }
+    .item-title { font-weight: 600; font-size: 0.98rem; color: #ffffff; }
+    .item-meta { font-size: 0.84rem; color: var(--muted); margin-top: 4px; }
+    .item-desc { font-size: 0.88rem; color: #c9d1d9; margin-top: 8px; line-height: 1.55; }
+    .item-badge {
+      display: inline-block; font-size: 0.72rem; font-weight: 600;
+      padding: 2px 7px; border-radius: 12px; margin-left: 8px;
+      background: #1f2937; color: #93c5fd; border: 1px solid rgba(147, 197, 253, 0.2);
     }
-    .tag.green { background: #0d2818; color: var(--accent2); }
-    .tag.purple { background: #1a1035; color: #c084fc; }
+    .item-badge.peer { background: #0d2818; color: #3fb950; border-color: rgba(63, 185, 80, 0.2); }
 
-    /* ── Skills ── */
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-      gap: 12px;
-    }
-    .skill-group h4 { font-size: 0.8rem; color: var(--muted); margin-bottom: 8px; font-weight: 500; }
-    .skill-group ul { list-style: none; }
-    .skill-group ul li { font-size: 0.875rem; color: var(--text); padding: 2px 0; }
-    .skill-group ul li::before { content: "· "; color: var(--accent); }
-
-    /* ── Footer ── */
-    footer { padding: 32px 0; text-align: center; color: var(--muted); font-size: 0.8rem; }
+    footer { padding: 36px 0; text-align: center; color: var(--muted); font-size: 0.82rem; }
   </style>
 </head>
 <body>
@@ -130,16 +178,14 @@
     <div class="avatar">IK</div>
     <div class="hero">
       <h1>Iakovos Kritikos</h1>
-      <div class="tagline">Data &amp; AI Engineer &nbsp;·&nbsp; Biomedical Informatics &nbsp;·&nbsp; Quantitative Systems</div>
+      <div class="role">Sr. Scientist, R&amp;D Informatics · Eli Lilly and Company</div>
+      <div class="sub-role">Doctoral Candidate (DBA), University College London · Boston, MA</div>
       <div class="links">
-        <a href="https://github.com/iakovoskritikos" target="_blank">
-          <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
-          iakovoskritikos
-        </a>
-        <a href="https://www.linkedin.com/in/iakovoskritikos" target="_blank">
-          <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-          LinkedIn
-        </a>
+        <a href="https://iakovoskritikos.com" target="_blank">🌐 iakovoskritikos.com</a>
+        <a href="https://orcid.org/0000-0003-3861-6268" target="_blank">🆔 ORCID</a>
+        <a href="https://scholar.google.com/citations?user=Zhz_rtQAAAAJ&hl=en" target="_blank">🎓 Google Scholar</a>
+        <a href="https://www.linkedin.com/in/iakovoskritikos" target="_blank">💼 LinkedIn</a>
+        <a href="https://github.com/iakovoskritikos" target="_blank">💻 GitHub</a>
       </div>
     </div>
   </div>
@@ -147,173 +193,141 @@
 
 <main>
 
-  <!-- About -->
-  <section class="about">
+  <section>
     <div class="container">
-      <div class="section-label">About</div>
-      <p>
-        I build data and AI systems at the intersection of biomedical science, engineering, and quantitative finance.
-        My work spans production data pipelines, machine learning infrastructure, and automated decision systems —
-        with a focus on rigorous validation and platform durability over feature velocity.
+      <div class="section-label">Identity &amp; Research Focus</div>
+      <p class="lead-text">
+        An architect of adaptive virtual-reality systems for medicine — treatment environments that read a person&#39;s physiological signals in real time and change what they deliver in response.
       </p>
       <p>
-        Currently a Data &amp; AI Engineer at Eli Lilly, pursuing a DBA at UCL, and building
-        a personal toolbox of composable engineering tools (Mētis) alongside a quantitative
-        equity trading system (Strategic Patience).
+        My work centers on closed-loop, physiologically adaptive virtual reality for psychiatric and neurological care, combining real-time electrophysiological signal processing (electrodermal activity, EEG, motion tracking), human-computer interaction, and high-throughput research informatics.
       </p>
+
+      <div class="callout-box">
+        <strong>Independent Academic Benchmarking:</strong> In 2026, an independent research group at the <strong>University of Alberta</strong> rebuilt this closed-loop adaptive VR methodology as the benchmark for their own system (<em>ACM Trans. Interactive Intelligent Systems</em> 16(1)), describing it as, to the best of their knowledge, the only prior adaptive-VR work for arachnophobia — establishing it as the reference point the field measures against.
+      </div>
     </div>
   </section>
 
-  <!-- Projects -->
   <section>
     <div class="container">
-      <div class="section-label">Projects</div>
-      <div class="projects-grid">
+      <div class="section-label">Peer Review &amp; Scientific Judging</div>
+      <p>
+        <strong>19 completed peer reviews</strong> across 12 leading scientific journals and four international publishers (<strong>PLOS, MDPI, Springer Nature, Frontiers</strong>), evaluating manuscripts in biomedical engineering, virtual reality exposure therapy, electrophysiological signal processing, and medical informatics (2021–2026).
+      </p>
+      <div style="margin-top: 14px;">
+        <span class="item-badge peer">MDPI (Certified Reviewer)</span>
+        <span class="item-badge peer">Frontiers in Virtual Reality</span>
+        <span class="item-badge peer">Springer Nature</span>
+        <span class="item-badge peer">PLOS</span>
+      </div>
+    </div>
+  </section>
 
-        <div class="card">
-          <div class="card-header">
-            <span class="card-icon">📈</span>
-            <div class="card-title">Strategic Patience</div>
+  <section>
+    <div class="container">
+      <div class="section-label">Selected Peer-Reviewed Publications</div>
+      <div class="item-list">
+
+        <div class="item-card">
+          <div class="item-title">
+            <a href="https://doi.org/10.61093/hem.7(2).124-146.2026" target="_blank">
+              Reengineering Virtual Reality: Economic and Implementation Impacts of Artificial Intelligence Integration in Mental and Neurological Healthcare
+            </a>
+            <span class="item-badge">2026</span>
           </div>
-          <div class="card-desc">
-            Quantitative trading system for sentiment-driven mispricing in large-cap equities.
-            Multi-layer architecture (L0–L8): news ingestion, catalyst scoring, PIT fundamentals,
-            backtesting engine, walk-forward validation, and dashboard.
-          </div>
-          <div class="card-tags">
-            <span class="tag">Python</span>
-            <span class="tag">Alpaca</span>
-            <span class="tag">Parquet</span>
-            <span class="tag green">Private</span>
-          </div>
+          <div class="item-meta"><em>Health Economics and Management Review</em>, 7(2):124–146 · <strong>Sole Author: Iakovos Kritikos</strong></div>
+          <div class="item-desc">Comprehensive review evaluating clinical workflows, health economics, and AI integration for adaptive therapeutic VR systems.</div>
         </div>
 
-        <div class="card">
-          <div class="card-header">
-            <span class="card-icon">🧰</span>
-            <div class="card-title">Mētis Toolbox</div>
+        <div class="item-card">
+          <div class="item-title">
+            <a href="https://doi.org/10.3390/bios16050265" target="_blank">
+              Biosensor-Integrated Virtual Reality for Cognitive Behavioral Therapy in Psychosis: A Systematic Review of a New Therapeutic Frontier
+            </a>
+            <span class="item-badge">2026</span>
           </div>
-          <div class="card-desc">
-            Personal toolbox of independent CLI tools — YouTube transcripts, audio transcription,
-            doc curation, access control auditing — orchestrated via a Model Context Protocol (MCP)
-            server and exposed to Claude Code.
-          </div>
-          <div class="card-tags">
-            <span class="tag">Python</span>
-            <span class="tag">MCP</span>
-            <span class="tag">Claude Code</span>
-            <span class="tag green">Private</span>
-          </div>
+          <div class="item-meta"><em>Biosensors</em>, 16(5):265 · Alevizopoulos AG, Anastasiou GG, Kritikos I, Alevizopoulou M, Alevizopoulos GA</div>
+          <div class="item-desc">Systematic synthesis of closed-loop biosensing and virtual reality applications in cognitive behavioral therapy.</div>
         </div>
 
-        <div class="card">
-          <div class="card-header">
-            <span class="card-icon">🧬</span>
-            <div class="card-title"><a href="https://github.com/iakovoskritikos/OncologyProject" target="_blank">Oncology Project</a></div>
+        <div class="item-card">
+          <div class="item-title">
+            <a href="https://doi.org/10.3389/fnhum.2021.596980" target="_blank">
+              Personalized Virtual Reality Human-Computer Interaction for Psychiatric and Neurological Illnesses: A Dynamically Adaptive Virtual Reality Environment That Changes According to Real-Time Feedback From Electrophysiological Signal Responses
+            </a>
+            <span class="item-badge">2021 Trial</span>
           </div>
-          <div class="card-desc">
-            ML models for oncology data analysis — classification, survival analysis,
-            and biomarker discovery applied to clinical datasets.
-          </div>
-          <div class="card-tags">
-            <span class="tag">Python</span>
-            <span class="tag">ML</span>
-            <span class="tag">Biomedical</span>
-          </div>
+          <div class="item-meta"><em>Frontiers in Human Neuroscience</em>, 15:596980 · <strong>Kritikos I</strong>, Alevizopoulos G, Koutsouris D</div>
+          <div class="item-desc">Controlled trial demonstrating that an adaptive VR environment responsive to real-time electrodermal activity held participants in the therapeutic target state significantly longer than a static environment.</div>
         </div>
 
-        <div class="card">
-          <div class="card-header">
-            <span class="card-icon">🔬</span>
-            <div class="card-title"><a href="https://github.com/iakovoskritikos/RNAdegformer" target="_blank">RNAdegformer</a></div>
+        <div class="item-card">
+          <div class="item-title">
+            <a href="https://doi.org/10.3390/virtualworlds2020011" target="_blank">
+              Can Brain–Computer Interfaces Replace Virtual Reality Controllers? A Machine Learning Movement Prediction Model during Virtual Reality Simulation Using EEG Recordings
+            </a>
+            <span class="item-badge">2023</span>
           </div>
-          <div class="card-desc">
-            Transformer-based model for RNA degradation prediction.
-            Deep learning applied to molecular biology sequence data.
-          </div>
-          <div class="card-tags">
-            <span class="tag">Python</span>
-            <span class="tag">PyTorch</span>
-            <span class="tag purple">Transformers</span>
-          </div>
+          <div class="item-meta"><em>Virtual Worlds</em>, 2(2):110–128 · <strong>Kritikos I</strong>, Makrypidis A, Alevizopoulos AG, Alevizopoulos G, Koutsouris D</div>
+          <div class="item-desc">Movement intent classification and BCI control within immersive virtual reality simulation using electroencephalographic signal processing.</div>
         </div>
 
-        <div class="card">
-          <div class="card-header">
-            <span class="card-icon">⚙️</span>
-            <div class="card-title"><a href="https://github.com/iakovoskritikos/Operations-Engineering" target="_blank">Operations Engineering</a></div>
+        <div class="item-card">
+          <div class="item-title">
+            <a href="https://doi.org/10.3390/s20051244" target="_blank">
+              Comparison between Full Body Motion Recognition Camera Interaction and Hand Controllers Interaction used in Virtual Reality Exposure Therapy for Acrophobia
+            </a>
+            <span class="item-badge">2020</span>
           </div>
-          <div class="card-desc">
-            Software &amp; operations management toolkit — process optimisation models,
-            scheduling algorithms, and operational analytics.
-          </div>
-          <div class="card-tags">
-            <span class="tag">Python</span>
-            <span class="tag">Operations Research</span>
-          </div>
+          <div class="item-meta"><em>Sensors</em>, 20(5):1244 · <strong>Kritikos J</strong>, Zoitaki C, Tzannetos G, Mehmeti A, Douloudi M, Nikolaou G, Alevizopoulos G, Koutsouris D</div>
+          <div class="item-desc">Comparative analysis of markerless full-body tracking versus handheld controllers in immersion and physiological arousal.</div>
         </div>
 
-        <div class="card">
-          <div class="card-header">
-            <span class="card-icon">🤖</span>
-            <div class="card-title"><a href="https://github.com/iakovoskritikos/bias-detection-tools-challenge" target="_blank">Bias Detection Tools</a></div>
+        <div class="item-card">
+          <div class="item-title">
+            <a href="https://doi.org/10.1109/ner.2019.8717170" target="_blank">
+              Anxiety detection from Electrodermal Activity Sensor with movement &amp; interaction during Virtual Reality Simulation
+            </a>
+            <span class="item-badge">IEEE NER 2019</span>
           </div>
-          <div class="card-desc">
-            Data science tooling for bias detection and fairness evaluation in ML models,
-            developed as part of a collaborative challenge.
-          </div>
-          <div class="card-tags">
-            <span class="tag">Python</span>
-            <span class="tag">Fairness</span>
-            <span class="tag">ML</span>
-          </div>
+          <div class="item-meta"><em>9th International IEEE EMBS Conference on Neural Engineering (NER)</em> · <strong>Kritikos J</strong>, Tzannetos G, Zoitaki C, Poulopoulou S, Koutsouris D</div>
+          <div class="item-desc">Real-time sympathetic nervous system response detection and motion artifact suppression during immersive VR simulation.</div>
         </div>
 
       </div>
     </div>
   </section>
 
-  <!-- Skills -->
   <section>
     <div class="container">
-      <div class="section-label">Stack</div>
-      <div class="skills-grid">
-        <div class="skill-group">
-          <h4>Languages</h4>
-          <ul>
-            <li>Python 3.11+</li>
-            <li>SQL</li>
-            <li>Bash / Shell</li>
-            <li>JavaScript</li>
-          </ul>
+      <div class="section-label">Education &amp; Credentials</div>
+      <div class="item-list">
+
+        <div class="item-card">
+          <div class="item-title">University College London (UCL)</div>
+          <div class="item-meta">Doctorate in Business Administration (DBA), Health · <em>In progress (Oct 2024 – Present)</em></div>
+          <div class="item-desc">Global Business School for Health · Research on health technology assessment and strategic evaluation in health informatics.</div>
         </div>
-        <div class="skill-group">
-          <h4>Data &amp; ML</h4>
-          <ul>
-            <li>PyTorch</li>
-            <li>Pandas / Polars</li>
-            <li>Parquet / Arrow</li>
-            <li>Scikit-learn</li>
-          </ul>
+
+        <div class="item-card">
+          <div class="item-title">Duke University</div>
+          <div class="item-meta">Master of Engineering Management (MEM) · <em>Aug 2022 – May 2023</em></div>
+          <div class="item-desc">Pratt School of Engineering · Engineering management, technology strategy, and data systems.</div>
         </div>
-        <div class="skill-group">
-          <h4>Infrastructure</h4>
-          <ul>
-            <li>Docker</li>
-            <li>Cloud (AWS / Azure)</li>
-            <li>GitHub Actions</li>
-            <li>MCP / Claude Code</li>
-          </ul>
+
+        <div class="item-card">
+          <div class="item-title">Imperial College London</div>
+          <div class="item-meta">MRes &amp; MSc, Bioengineering · <em>Oct 2020 – Oct 2022</em></div>
+          <div class="item-desc">Department of Bioengineering · Biomedical signals, neurotechnology, and medical device design.</div>
         </div>
-        <div class="skill-group">
-          <h4>Domain</h4>
-          <ul>
-            <li>Biomedical Informatics</li>
-            <li>Quantitative Finance</li>
-            <li>NLP / News Analysis</li>
-            <li>Signal Processing</li>
-          </ul>
+
+        <div class="item-card">
+          <div class="item-title">National Technical University of Athens (NTUA)</div>
+          <div class="item-meta">Integrated MEng, Electrical &amp; Computer Engineering · <em>2011 – 2018</em></div>
+          <div class="item-desc">School of Electrical and Computer Engineering · Biomedical engineering, embedded systems, and signal processing.</div>
         </div>
+
       </div>
     </div>
   </section>
@@ -322,7 +336,7 @@
 
 <footer>
   <div class="container">
-    <p>Iakovos Kritikos &nbsp;·&nbsp; <a href="https://github.com/iakovoskritikos">github.com/iakovoskritikos</a></p>
+    <p>Iakovos (Jacob) Kritikos &nbsp;·&nbsp; <a href="https://iakovoskritikos.com">iakovoskritikos.com</a> &nbsp;·&nbsp; ORCID: <a href="https://orcid.org/0000-0003-3861-6268" target="_blank">0000-0003-3861-6268</a></p>
   </div>
 </footer>
 
